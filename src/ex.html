@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMS JavaScript</title>
+</head>
+<body>
+
+<div class="app"></div>
+
+<script type="text/javascript">
+
+class Ex{
+  constructor(title = 'def title', content = 'def content'){
+    this.title = title
+    this.content = content
+  }
+  
+  toExtract(){
+    return `Full data is: <i>${this.title}</i> contains <b>${this.content}</b><br />`;
+  }
+}
+
+const data = [
+  new Ex('first title', 'first content'),
+  new Ex('second title', 'second content'),
+  new Ex(),
+]
+
+console.log(data);
+
+const app = document.querySelector('.app');
+
+data.forEach(item => {
+  app.insertAdjacentHTML('beforeend', item.toExtract());
+});
+
+</script>
+</body>
+</html>
