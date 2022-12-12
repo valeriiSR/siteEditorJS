@@ -1,4 +1,4 @@
-# Работа для портфолио siteEditorJS
+# Работа для портфолио siteEditorJS 2022
 
 1. Сборщик Parcel
 2. Используется: HTML, CSS, JavaScript
